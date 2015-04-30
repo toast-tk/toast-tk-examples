@@ -1,0 +1,11 @@
+{
+	"settings":[
+		{
+		  "driver": "connecteurSwing",
+		  "type": "swing",
+		  "className": "fr.synaptix.fwk.connectors.SwingConnector",
+		  "sentences": [
+		  ]
+		}
+	]	
+}

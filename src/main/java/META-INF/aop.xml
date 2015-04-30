@@ -1,0 +1,9 @@
+<aspectj>
+    <aspects>
+        <!--aspect name="fr.synaptix.agent.aspect.InspectProviderAspect" /-->
+    </aspects>
+
+    <!--  <weaver options="-verbose -debug -showWeaveInfo"> -->
+    <weaver options="-verbose">
+    </weaver>
+</aspectj>

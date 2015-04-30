@@ -1,0 +1,17 @@
+h1. Name:blabla
+#scenario id:550842d1430000de053841a3
+#scenario driver:connecteurSwing
+|| scenario || swing ||
+| greet test |
+
+h1. Name:test
+#scenario id:55083f7943000098053841a1
+#scenario driver:connecteurSwing
+|| scenario || swing ||
+| Saisir *value* dans *test.toto234* |
+
+h1. Name:anotherTest
+#scenario id:550842bf430000d8053841a2
+#scenario driver:connecteurSwing
+|| scenario || swing ||
+
