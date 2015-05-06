@@ -1,15 +1,15 @@
 package fr.synaptix.test.fixtures;
 
-import com.synaptix.toast.core.annotation.Check;
-import com.synaptix.toast.core.annotation.Fixture;
-import com.synaptix.toast.core.annotation.FixtureKind;
-import com.synaptix.toast.core.setup.TestResult;
-import com.synaptix.toast.core.setup.TestResult.ResultKind;
+import com.synaptix.toast.core.adapter.ActionAdapterKind;
+import com.synaptix.toast.core.annotation.Action;
+import com.synaptix.toast.core.annotation.ActionAdapter;
+import com.synaptix.toast.core.report.TestResult;
+import com.synaptix.toast.core.report.TestResult.ResultKind;
 
-@Fixture(value=FixtureKind.service,name="SampleFixture")
-public class SimpleFixture {
+@ActionAdapter(value=ActionAdapterKind.service,name="SampleFixture")
+public class SimpleActionAdapter {
 
-    @Check("([\\w\\W]+) = ([\\w\\W]+)")
+    @Action(action = "([\\w\\W]+) = ([\\w\\W]+)", description = "Check if a value equals another value ")
     public TestResult setCenterCellsPanel(
             String firstValue,
             String secondValue
