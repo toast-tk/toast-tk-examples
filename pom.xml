@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<version>1.0-SNAPSHOT</version>
 	<groupId>fr.synaptix.test</groupId>
-	<artifactId>TestSample</artifactId>
+	<artifactId>ToastTestProjectStarterKit</artifactId>
 	<properties>
 		<toast.version>1.3-rc3</toast.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
