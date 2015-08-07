@@ -1,9 +1,11 @@
 package fr.synaptix.test.runners;
 
-import com.google.inject.Guice;
-import com.synpatix.toast.runtime.core.runtime.AbstractProjectRunner;
-import fr.synaptix.test.fixtures.BootModule;
 import org.junit.Test;
+
+import com.google.inject.Guice;
+import com.synaptix.toast.runtime.core.runtime.AbstractProjectRunner;
+
+import fr.synaptix.test.fixtures.BootModule;
 
 public class CIProjectRunner extends AbstractProjectRunner {
 
