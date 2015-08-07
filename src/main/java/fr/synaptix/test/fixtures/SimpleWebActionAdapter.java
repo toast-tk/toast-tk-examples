@@ -7,7 +7,7 @@ import com.synaptix.toast.core.annotation.ActionAdapter;
 import com.synaptix.toast.core.runtime.IActionItemRepository;
 
 
-@ActionAdapter(name="rus-web-connector", value= ActionAdapterKind.web)
+@ActionAdapter(name="web-adapter", value= ActionAdapterKind.web)
 public class SimpleWebActionAdapter extends AbstractWebActionAdapter{
 
 	@Inject

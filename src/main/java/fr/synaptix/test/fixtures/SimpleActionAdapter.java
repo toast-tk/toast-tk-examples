@@ -6,10 +6,10 @@ import com.synaptix.toast.core.annotation.ActionAdapter;
 import com.synaptix.toast.core.report.TestResult;
 import com.synaptix.toast.core.report.TestResult.ResultKind;
 
-@ActionAdapter(value=ActionAdapterKind.service,name="SampleFixture")
+@ActionAdapter(value=ActionAdapterKind.service,name="service-adapter")
 public class SimpleActionAdapter {
 
-    @Action(action = "([\\w\\W]+) = ([\\w\\W]+)", description = "Check if a value equals another value ")
+    @Action(action = "{{value:string}} = {{value:string}}", description = "Check if a value equals another value ")
     public TestResult setCenterCellsPanel(
             String firstValue,
             String secondValue
