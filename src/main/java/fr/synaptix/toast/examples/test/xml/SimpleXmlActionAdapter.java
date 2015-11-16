@@ -12,7 +12,7 @@ import fr.synaptix.toast.examples.test.bean.ProjetFlux;
 public class SimpleXmlActionAdapter {
 
 	@Action(
-			action="Integrate {{fr.synaptix.toast.examples.test.bean.ProjetFlux:value:xml}}", 
+			action="Integrate {{value:xml}}", 
 			description="Integrate an xml as a Java Bean to the object dictionnary"
 			)
 	public TestResult integrerXml(ProjetFlux fluxFromXml){
@@ -26,8 +26,7 @@ public class SimpleXmlActionAdapter {
 	}
 	
 	@Action(
-			action="{{fr.synaptix.toast.examples.test.bean.ProjetFlux:value:xml}} equal to "
-			+ "{{fr.synaptix.toast.examples.test.bean.ProjetFlux:value:xml}}",
+			action="{{value:xml}} equal to {{value:xml}}",
 			description="Comparaison to the status on a given instance"
 			)
 	public TestResult integrerXml(ProjetFlux fluxFromXml, ProjetFlux instanceAttendue){
