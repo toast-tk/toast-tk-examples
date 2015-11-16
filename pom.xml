@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0.0-SNAPSHOT</version>
 	<groupId>fr.synaptix.test</groupId>
-	<artifactId>TestSample</artifactId>
+	<artifactId>toast-tk-examples</artifactId>
 	<properties>
-		<toast.version>1.3-rc3</toast.version>
+		<toast.version>1.0.0-SNAPSHOT</toast.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.int.sourceDirectory>${project.basedir}/src/int/java</project.int.sourceDirectory>
 		<project.int.classDirectory>${project.basedir}/src/int/java</project.int.classDirectory>
@@ -26,7 +26,7 @@
 									<pluginExecutionFilter>
 										<groupId>com.synaptix.toast</groupId>
 										<artifactId>toast-tk-maven-plugin</artifactId>
-										<versionRange>[${toast.version},)</versionRange>
+										<versionRange>${toast.version}</versionRange>
 										<goals>
 											<goal>generate</goal>
 										</goals>
@@ -46,7 +46,7 @@
 											toast-tk-maven-plugin
 										</artifactId>
 										<versionRange>
-											[${toast.version},)
+											[1.3-rc4,)
 										</versionRange>
 										<goals>
 											<goal>generate</goal>
@@ -69,8 +69,8 @@
 				<version>3.2</version>
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
-					<source>1.7</source>
-					<target>1.7</target>
+					<source>1.8</source>
+					<target>1.8</target>
 				</configuration>
 			</plugin>
 			<plugin>
@@ -80,31 +80,6 @@
 				<configuration>
 					<encoding>${project.build.sourceEncoding}</encoding>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>com.synaptix.toast</groupId>
-				<artifactId>toast-tk-maven-plugin</artifactId>
-				<version>${toast.version}</version>
-				<configuration>
-					<host>http://localhost:9000</host>
-					<outputPackage>fr.synaptix.test.fixtures</outputPackage>
-				</configuration>
-				<executions>
-					<execution>
-						<id>download</id>
-						<phase>validate</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>upload</id>
-						<phase>install</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-					</execution>
-				</executions>
 			</plugin>
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
