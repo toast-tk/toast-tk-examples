@@ -13,8 +13,12 @@
 
 # Maven
 log/
+logs/
 target/
 pom.xml.versionsBackup
 
 # SVN
 .svn/
+
+#toast
+toast-logs.log
