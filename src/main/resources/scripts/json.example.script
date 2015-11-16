@@ -1,0 +1,10 @@
+$fluxJson:="""
+{
+ "id": "100",
+ "name" : "projet",
+  "status" : "1"
+}
+"""
+
+|| scenario || service ||
+| @service:json-adapter Integrate *$fluxJson* |
