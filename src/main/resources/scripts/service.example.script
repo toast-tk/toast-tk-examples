@@ -12,6 +12,8 @@ $jsonToPost:="""
 """
 $url:=https://www.google.com
 
+Deuxième test : ceci est un commentaire
+
 || scenario || service ||
 | GET *https://www.google.com* |
 | POST *$jsonToPost* to *$url* |

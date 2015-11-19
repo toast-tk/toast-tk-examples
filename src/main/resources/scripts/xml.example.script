@@ -15,5 +15,5 @@ $instanceAttendue:="""
 """
 
 || scenario || service ||
-| Integrate *$fluxXml* |
+|  @service:xml-adapter Integrate *$fluxXml* |
 | *$fluxXml* equal to *$instanceAttendue*|

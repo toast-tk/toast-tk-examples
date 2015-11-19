@@ -174,9 +174,8 @@
 
     <repositories>
         <repository>
-            <id>synaptix-repository</id>
-            <name>Synaptix Repository</name>
-            <url>http://maven.synaptix-labs.com/m2</url>
+            <id>synaptix-snapshots-repository</id>
+            <url>http://nexus.synaptix-labs.com/content/repositories/snapshots/</url>
         </repository>
     </repositories>
 </project>
