@@ -1,7 +1,7 @@
 package fr.synaptix.toast.examples.project;
 
 import com.synaptix.toast.dao.domain.impl.test.block.IProject;
-import com.synaptix.toast.runtime.parse.ScenarioParser;
+import com.synaptix.toast.runtime.parse.ProjectParser;
 import org.junit.Assert;
 import org.junit.Test;
 
@@ -25,8 +25,8 @@ public class CIProjectRunner extends AbstractProjectRunner {
             URL testFileUrl = CIProjectRunner.class.getClassLoader().getResource("campaigns/project1.test");
             Assert.assertNotNull(testFileUrl);
             String path = testFileUrl.getPath();
-            ScenarioParser scenarioParser = new ScenarioParser();
-            IProject project = scenarioParser.parse(path);
+            ProjectParser projectParser = new ProjectParser();
+            IProject project = projectParser.parse(path);
             projectRunner.execute(project, false);
         } catch (Exception e) {
             e.printStackTrace();
