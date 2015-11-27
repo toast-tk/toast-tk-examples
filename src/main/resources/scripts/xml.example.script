@@ -1,4 +1,4 @@
-$fluxXml:="""
+$xmlFlux:="""
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <projet id="100">
     <status>1</status>
@@ -6,7 +6,7 @@ $fluxXml:="""
 </projet>
 """
 
-$instanceAttendue:="""
+$expected:="""
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <projet id="100">
     <status>20</status>
@@ -16,4 +16,4 @@ $instanceAttendue:="""
 
 || scenario || service ||
 |  @service:xml-adapter Integrate *$fluxXml* |
-| *$fluxXml* equal to *$instanceAttendue*|
+| *$xmlFlux* equal to *$expected*|
