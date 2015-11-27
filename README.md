@@ -11,10 +11,23 @@ git clone https://github.com/synaptix-labs/toast-tk-examples.git
 cd toast-tk-examples
 ```
 
-Import the project in your IDE (as a maven project) and run `fr.synaptix.toast.examples.project.CIProjectRunner.java`. This class runs the test campaigns described in `project1.test`.
+Import the project in your IDE (as a maven project).
+ 
+### Run a test set
+Run `fr.synaptix.toast.examples.project.CIProjectRunner.java`. This class runs the test campaigns described in `project1.test`.
 
 The test report will automatically be opened in your browser when the tests examples are executed.
 This report is generated in the project folder, under `/target/toast-test-results/Project_report.html`.
+
+[REPORT IMAGE]
+
+### Run tests files individually
+
+To run the web test, start `fr.synaptix.toast.examples.project.WebExampleRunner.java`.
+The test report will automatically be opened in your browser after execution.
+
+[REPORT IMAGE]
+
 
 ## The test files
 ### Campaign
@@ -30,50 +43,6 @@ Here, the campaign's name is "TNR v1.0", and contains the files `json.example.sc
 ``` 
 
 ### Scripts
-#### Json
-
-``` 
-$fluxJson:="""
-{
- "id": "100",
- "name" : "projet",
-  "status" : "1"
-}
-"""
-
-|| scenario || service ||
-| @service:json-adapter Integrate *$fluxJson* |
-``` 
-
-1. Puts json data in the variable `$fluxJson`.
-2. Creates a scenario (of type service).
-3. First test step: process the json data.
-
-#### Service
-
-``` 
-# Simple assert example
-|| scenario || service ||
-| *toto* = *titi* |
-| *toto* = *toto* |
-
-# Http Service Example
-$jsonToPost:="""
-{
-	"name": "user1",
-	"password": "user1_pwd" 
-}
-"""
-$url:=https://www.google.com
-
-Deuxième test : ceci est un commentaire
-
-|| scenario || service ||
-| GET *https://www.google.com* |
-| POST *$jsonToPost* to *$url* |
-``` 
-
-TODO
 
 #### Web
 
@@ -101,6 +70,46 @@ h1. login scenario
 5. Step: open the browser at www.google.com
 6. Type *test* in the widget *search* in the page *GoogleSearchPage*
 
+#### Json
+
+``` 
+$fluxJson:="""
+{
+ "id": "100",
+ "name" : "projet",
+  "status" : "1"
+}
+"""
+
+|| scenario || service ||
+| @service:json-adapter Integrate *$fluxJson* |
+``` 
+
+1. Puts json data in the variable `$fluxJson`.
+2. Creates a scenario (of type service).
+3. First test step: process the json data.
+
+#### Service
+
+``` 
+# Http Service Example
+$jsonToPost:="""
+{
+	"name": "user1",
+	"password": "user1_pwd" 
+}
+"""
+$url:=https://www.google.com
+
+|| scenario || service ||
+| GET *https://www.google.com* |
+| POST *$jsonToPost* to *$url* |
+``` 
+
+TODO
+
+
+
 #### Xml
 
 ``` 
@@ -121,8 +130,8 @@ $expected:="""
 """
 
 || scenario || service ||
-|  @service:xml-adapter Integrate *$fluxXml* |
-| *$xmlFlux* equal to *$expected*|
+| @service:xml-adapter Integrate *$fluxXml* |
+| *$xmlFlux* equal to *$expected*           |
 ``` 
 
 TODO
