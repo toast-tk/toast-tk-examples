@@ -22,7 +22,7 @@ public class CIProjectRunner extends AbstractProjectRunner {
         CIProjectRunner projectRunner;
         try {
             projectRunner = new CIProjectRunner();
-            URL testFileUrl = CIProjectRunner.class.getClassLoader().getResource("campaigns/project1.test");
+            URL testFileUrl = CIProjectRunner.class.getClassLoader().getResource("suites/testsuite.example.script");
             Assert.assertNotNull(testFileUrl);
             String path = testFileUrl.getPath();
             ProjectParser projectParser = new ProjectParser();
