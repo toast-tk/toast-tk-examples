@@ -69,7 +69,7 @@ h1. google search scenario
 5. Step: open the browser at www.google.com
 6. Type *test* in the widget *search* in the page *GoogleSearchPage*
 
-h1. google search scenario in french
+#### Mapping action with custom sentences
 
 Toast engine comes with a set of predefined sentences to easy web browser automation.  
 These sentences are defined in the "AbstractWebActionAdapter" class from which "SimpleWebActionAdapter" currently inherits.  
