@@ -15,5 +15,5 @@ $expected:="""
 """
 
 || scenario || service ||
-|  @service:xml-adapter Integrate *$fluxXml* |
+|  @service:xml-adapter Integrate *$xmlFlux* |
 | *$xmlFlux* equal to *$expected*|

@@ -1,21 +1,18 @@
 package fr.synaptix.toast.examples.project;
 
-import com.synaptix.toast.dao.domain.impl.test.block.IProject;
-import com.synaptix.toast.runtime.parse.ProjectParser;
+import java.net.URL;
+
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.google.inject.Guice;
+import com.synaptix.toast.dao.domain.impl.test.block.IProject;
 import com.synaptix.toast.runtime.AbstractProjectRunner;
-
-import fr.synaptix.toast.examples.boot.BootModule;
-
-import java.net.URL;
+import com.synaptix.toast.runtime.parse.ProjectParser;
 
 public class CIProjectRunner extends AbstractProjectRunner {
 
     public CIProjectRunner() throws Exception {
-        super(Guice.createInjector(new BootModule()));
+        super();
     }
 
     public static void main(String[] args) {

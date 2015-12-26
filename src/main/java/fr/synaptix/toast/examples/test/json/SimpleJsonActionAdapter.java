@@ -11,7 +11,9 @@ import fr.synaptix.toast.examples.test.bean.ProjetFlux;
 @ActionAdapter(name="json-adapter", value= ActionAdapterKind.service)
 public class SimpleJsonActionAdapter {
 	
-	@Action(action="Integrate {{fr.synaptix.toast.examples.test.bean.ProjetFlux:value:json}}", description="Integrate json as java bean")
+	@Action(id="integrate",
+			action="Integrate {{fr.synaptix.toast.examples.test.bean.ProjetFlux:value:json}}", 
+			description="Integrate json as java bean")
 	public TestResult integrerJson(ProjetFlux fluxFromJson){
 		return new TestResult();
 	}

@@ -1,8 +1,8 @@
-package fr.synaptix.toast.examples.test.json;
+package fr.synaptix.toast.examples.test.web;
 
 import com.synaptix.toast.runtime.AbstractScenarioRunner;
 
-public class JsonExampleRunner extends AbstractScenarioRunner {
+public class WebExampleFRRunner extends AbstractScenarioRunner {
 
 	@Override
 	public void tearDownEnvironment() {
@@ -21,8 +21,8 @@ public class JsonExampleRunner extends AbstractScenarioRunner {
 	}
 
 	public static void main(String[] args) throws Exception {
-		JsonExampleRunner testRunner = new JsonExampleRunner();
-		testRunner.run("./scripts/json.example.script");
+		WebExampleFRRunner testRunner = new WebExampleFRRunner();
+		testRunner.run("./scripts/web.example.fr.script");
 	}
 
 }

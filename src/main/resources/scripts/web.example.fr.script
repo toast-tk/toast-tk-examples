@@ -1,4 +1,4 @@
-h1. Web Components Setup
+h1. Description des pages
 
 || auto setup || web page || GoogleSearchPage ||
 | name | type | locator | method | position |
@@ -8,5 +8,5 @@ h1. login scenario
 
 || scenario || web ||
 |Naviguer vers *http://www.google.com*|
-|Type *test* in *GoogleSearchPage.search*|
+|Saisir *test* dans *GoogleSearchPage.search*|
 

@@ -1,0 +1,11 @@
+default-web-driver:
+  - navigate: Naviguer vers $1 
+  - type_in_web_component: Saisir $1 dans $2 
+  - click_on_web_component: Cliquer sur $1 
+  - select_in_web_component: Selectionner $1 dans $2 
+  - web_component_exists: Le composant $1 existe 
+  - close_browser: Fermer le navigateur
+json-adapter:
+  - integrate: Intégrer le json $1
+xml-adapter:
+  - integrate: Intégrer l'xml $1

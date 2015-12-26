@@ -1,9 +1,5 @@
 package fr.synaptix.toast.examples.test.service;
 
-import javax.ws.rs.core.Response;
-
-import org.apache.http.client.methods.HttpGet;
-
 import com.google.gson.Gson;
 import com.synaptix.toast.core.adapter.ActionAdapterKind;
 import com.synaptix.toast.core.annotation.Action;

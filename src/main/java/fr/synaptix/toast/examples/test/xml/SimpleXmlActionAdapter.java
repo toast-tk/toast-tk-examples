@@ -12,6 +12,7 @@ import fr.synaptix.toast.examples.test.bean.ProjetFlux;
 public class SimpleXmlActionAdapter {
 
 	@Action(
+			id="integrate",
 			action="Integrate {{value:xml}}", 
 			description="Integrate an xml as a Java Bean to the object dictionnary"
 			)

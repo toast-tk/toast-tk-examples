@@ -1,17 +1,13 @@
 package fr.synaptix.toast.examples.project;
 
-import com.synaptix.toast.dao.domain.impl.test.block.IProject;
-import com.synaptix.toast.runtime.parse.ProjectParser;
+import java.net.URL;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.google.inject.Guice;
+import com.synaptix.toast.dao.domain.impl.test.block.IProject;
 import com.synaptix.toast.runtime.AbstractProjectRunner;
-
-import fr.synaptix.toast.examples.boot.BootModule;
-
-import java.net.URL;
+import com.synaptix.toast.runtime.parse.ProjectParser;
 
 /**
  * To run this example, a mongoDB instance is required 
@@ -24,7 +20,7 @@ public class CIMongoStorageProjectRunner extends AbstractProjectRunner {
 	private static final int MONGO_DB_REPORT_STORAGE_PORT = 27017;
 	
     public CIMongoStorageProjectRunner(String mongoDbHost, int mongoDbPort) throws Exception {
-        super(Guice.createInjector(new BootModule()), mongoDbHost, mongoDbPort);
+        super(mongoDbHost, mongoDbPort);
     }
 
     public static void main(String[] args) {

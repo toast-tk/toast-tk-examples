@@ -51,12 +51,11 @@ Test actions on a web page using selenium.
 ``` 
 h1. Description des pages
 
-|| auto setup ||
-| web page | GoogleSearchPage |
+|| auto setup || web page || GoogleSearchPage ||
 | name   | type  | locator | method | position |
 | search | input | lst-ib  | ID     | 0        |
 
-h1. login scenario
+h1. google search scenario
 
 || scenario || web ||
 |Open browser at *http://www.google.com*|
@@ -69,6 +68,36 @@ h1. login scenario
 4. Create a scenario of type web.
 5. Step: open the browser at www.google.com
 6. Type *test* in the widget *search* in the page *GoogleSearchPage*
+
+h1. google search scenario in french
+
+Toast engine comes with a set of predefined sentences to easy web browser automation.  
+These sentences are defined in the "AbstractWebActionAdapter" class from which "SimpleWebActionAdapter" currently inherits.  
+The current example show how we can map custom sentences to predefined one based on the action id.  
+The file toast.yml contains mappings for the different sentences defined in the "AbstractWebActionAdapter", using yaml syntax:
+
+``` 
+default-web-driver:
+  - navigate: Naviguer vers $1 
+  - type_in_web_component: Saisir $1 dans $2 
+  - click_on_web_component: Cliquer sur $1 
+  - select_in_web_component: Selectionner $1 dans $2 
+  - web_component_exists: Le composant $1 existe 
+  - close_browser: Fermer le navigateur
+...
+```
+
+Within the "web.example.fr.script" we are currently doing the same scenario as the previous one, except that we currently call our custom sentences instead of predefined one.
+
+```
+...
+Same init
+...
+
+|| scenario || web ||
+|Naviguer vers *http://www.google.com*| -> processed the same as -> Open browser at *http://www.google.com*
+|Type *test* in *GoogleSearchPage.search*| -> processed the same as -> Type *test* in *GoogleSearchPage.search*
+``` 
 
 #### Service
 
