@@ -12,7 +12,6 @@
 		<project.int.classDirectory>${project.basedir}/src/int/java</project.int.classDirectory>
 	</properties>
 	<build>
-		<sourceDirectory>/src/main/java</sourceDirectory>
 		<pluginManagement>
 			<plugins>
 				<plugin>
