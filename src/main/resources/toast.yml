@@ -9,3 +9,6 @@ json-adapter:
   - integrate: Intégrer le json $1
 xml-adapter:
   - integrate: Intégrer l'xml $1
+dynamic-service-adapter:
+  - sql: Faire la requete $1 et la sauvegarder dans la variable $2
+  

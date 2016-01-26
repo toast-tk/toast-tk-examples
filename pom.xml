@@ -130,7 +130,6 @@
 			<artifactId>toast-tk-runtime</artifactId>
 			<version>${toast.version}</version>
 		</dependency>
-
 	</dependencies>
 	<profiles>
 		<profile>
