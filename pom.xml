@@ -130,7 +130,11 @@
 			<artifactId>toast-tk-runtime</artifactId>
 			<version>${toast.version}</version>
 		</dependency>
-
+		<dependency>
+			<groupId>com.synaptix.toast</groupId>
+			<artifactId>toast-tk-selenium-plugin</artifactId>
+			<version>${toast.version}</version>
+		</dependency>
 	</dependencies>
 	<profiles>
 		<profile>

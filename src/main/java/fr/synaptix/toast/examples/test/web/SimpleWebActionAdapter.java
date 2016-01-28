@@ -19,4 +19,5 @@ public class SimpleWebActionAdapter extends AbstractWebActionAdapter{
 	public SimpleWebActionAdapter(IActionItemRepository repo) {
 		super(repo);
 	}
+	
 }
