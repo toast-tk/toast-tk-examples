@@ -8,5 +8,5 @@ h1. login scenario
 
 || scenario || web ||
 |Naviguer vers *http://www.google.com*|
-|Saisir *test* dans *GoogleSearchPage.search*|
+|Saisir dans *GoogleSearchPage.search* la valeur *test*|
 
