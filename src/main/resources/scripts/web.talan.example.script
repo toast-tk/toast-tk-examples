@@ -2,14 +2,15 @@
 | name | type | locator | method | position | 
 | jobsList | select | .sf-field-post-meta-metier .sf-input-select | CSS | 0 |
 | name | input | .nom .wpcf7-validates-as-required | CSS | 0 |
-| Job:job | component | .fusion-portfolio-content | CSS | 0 |
+| job | component:Job | .fusion-portfolio-content | CSS | 0 |
 
 || setup || web || Job ||
 | name | type | locator | method | position | 
 | title | link | .entry-title a | CSS | 0 |
 
 || scenario || web ||
-|Open browser at *http://www.talan.fr/en/jobs3/*|
-|Count *Jobs.Job:job*|
-|Select the *5*th *Jobs.Job:job* as *$myJob*|
+|Naviger vers *http://www.talan.fr/en/jobs3/*|
+|With *Jobs.job* as *$myJobs*
+|Count *$myJobs*|
+|Select the *5*th *$myJobs* as *$myJob*|
 |Click on *$myJob.title*|

@@ -2,7 +2,7 @@
 | name | type | locator | method | position | 
 | jobsList | select | .sf-field-post-meta-metier .sf-input-select | CSS | 0 |
 | name | input | .nom .wpcf7-validates-as-required | CSS | 0 |
-| Job:job | component | .fusion-portfolio-content | CSS | -1 |
+| job | component:Job | .fusion-portfolio-content | CSS | 0 |
 
 || setup || web || Job ||
 | name | type | locator | method | position | 
@@ -15,4 +15,4 @@ $name := Foo Baz
 |Type *Foo Bar* in *Jobs.name*|
 |Type *$name* in *Jobs.name*|
 |Select *4* in *Jobs.jobsList*|
-|Click on *Jobs.Job:job.title*|
+|Click on *Jobs.job.title*|
