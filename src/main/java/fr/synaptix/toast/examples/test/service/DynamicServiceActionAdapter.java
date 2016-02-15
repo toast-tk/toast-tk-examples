@@ -4,7 +4,7 @@ import com.google.inject.Inject;
 import com.synaptix.toast.core.adapter.ActionAdapterKind;
 import com.synaptix.toast.core.annotation.Action;
 import com.synaptix.toast.core.annotation.ActionAdapter;
-import com.synaptix.toast.core.report.ErrorResult;
+import com.synaptix.toast.core.report.FailureResult;
 import com.synaptix.toast.core.report.SuccessResult;
 import com.synaptix.toast.dao.domain.api.test.ITestResult;
 import com.synaptix.toast.runtime.IActionItemRepository;
@@ -25,7 +25,7 @@ public class DynamicServiceActionAdapter {
 			return new SuccessResult(value);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ErrorResult(e.getMessage());
+			return new FailureResult(e.getMessage());
 		}
 	}
 

@@ -18,11 +18,9 @@ public class SimpleXmlActionAdapter {
 			)
 	public ITestResult integrerXml(ProjetFlux fluxFromXml){
 		int formerId = fluxFromXml.getId();
-		
 		//simulate an object state mutation
 		fluxFromXml.setId(0);
 		fluxFromXml.setStatus(20); 
-		
 		return new SuccessResult("Flux integrated with former id -> " + formerId);
 	}
 	
