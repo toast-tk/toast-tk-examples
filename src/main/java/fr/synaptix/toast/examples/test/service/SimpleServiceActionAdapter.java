@@ -6,10 +6,9 @@ import com.google.gson.Gson;
 import com.synaptix.toast.core.adapter.ActionAdapterKind;
 import com.synaptix.toast.core.annotation.Action;
 import com.synaptix.toast.core.annotation.ActionAdapter;
-import com.synaptix.toast.core.report.ErrorResult;
+import com.synaptix.toast.core.report.FailureResult;
 import com.synaptix.toast.core.report.SuccessResult;
 import com.synaptix.toast.dao.domain.api.test.ITestResult;
-import com.synaptix.toast.dao.domain.api.test.ITestResult.ResultKind;
 
 import fr.synaptix.toast.examples.test.bean.User;
 
@@ -23,15 +22,20 @@ public class SimpleServiceActionAdapter {
 			return new SuccessResult("Status Reponse Code: " + responseStatusCode);
 		} catch (Exception e) {
 			e.printStackTrace();
-			return new ErrorResult(e.getMessage());
+			return new FailureResult(e.getMessage());
 		}
 	}
 	
-	@Action(action = "POST {{value:json}} to {{value}}", description = "Post json")
-	public String postUrl(User user, String url) throws IOException, Exception{
-		String json = new Gson().toJson(user);
-		int responseStatusCode = HttpHelper.POST(url, json);
-		return "Status Reponse Code: " + responseStatusCode;
+	@Action(action = "POST {{fr.synaptix.toast.examples.test.bean.User:value:json}} to {{value}}", description = "Post json")
+	public ITestResult postUrl(User user, String url){
+		try {
+			String json = new Gson().toJson(user);
+			int responseStatusCode = HttpHelper.POST(url, json);
+			return new SuccessResult("Status Reponse Code: " + responseStatusCode);
+		} catch (Exception e) {
+			e.printStackTrace();
+			return new FailureResult(e.getMessage());
+		}
 	}
 
 
@@ -42,12 +46,12 @@ public class SimpleServiceActionAdapter {
 			if (firstValue.equals(secondValue)) {
 				return new SuccessResult();
 			} else {
-				return new ErrorResult(firstValue
+				return new FailureResult(firstValue
 						+ " is not equal to " + secondValue);
 			}
 		} catch (final Exception e) {
 			e.printStackTrace();
-			return new ErrorResult(e.getCause().getMessage());
+			return new FailureResult(e.getCause().getMessage());
 		}
 	}
 }
