@@ -159,8 +159,8 @@
 
     <repositories>
         <repository>
-            <id>talanlabs-snapshots-repository</id>
-            <url>http://nexus.talanlabs.com/content/repositories/snapshots/</url>
+            <id>talanlabs-repository</id>
+            <url>http://nexus.talanlabs.com/content/repositories/releases/</url>
         </repository>
     </repositories>
 </project>
