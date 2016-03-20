@@ -13,7 +13,7 @@ import fr.synaptix.toast.examples.test.bean.ProjetFlux;
 public class SimpleJsonActionAdapter {
 	
 	@Action(id="integrate",
-			action="Integrate {{fr.synaptix.toast.examples.test.bean.ProjetFlux:value:json}}", 
+			action="Integrate {{value:json}}", 
 			description="Integrate json as java bean")
 	public ITestResult integrerJson(ProjetFlux fluxFromJson){
 		return new SuccessResult();

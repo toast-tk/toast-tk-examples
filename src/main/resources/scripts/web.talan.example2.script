@@ -10,8 +10,6 @@
 
 || scenario || web ||
 |Open browser at *http://www.talan.fr/en/jobs3/*|
-|Upload my word document *MyDoc*|
-|With *Jobs.job* as *$myJobs*|
-|Count *$myJobs*|
-|Select the *5*th *$myJobs* as *$myJob*|
-|Click on *$myJob.title*|
+|Count *Jobs.job*|
+|Select the *5*th *Jobs.job* as *$myJob*|
+|Click on *$myJobs.title*|

@@ -1,0 +1,15 @@
+page id:55408fe2e354dde407e3254f
+|| setup || swing page || ErrorDialog ||
+| name | type | locator |
+|OK|button|OK|
+
+page id:55408f1de354dde407e3254e
+|| setup || swing page || LoginDialog ||
+| name | type | locator |
+|loginField2|input|com.sncfr.fret.core.LoginDialog:loginTextField|
+
+page id:55ec419edaea7fa3f69dd5e7
+|| setup || swing page || NameDialog ||
+| name | type | locator |
+|test|button|blabla|
+
