@@ -51,37 +51,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>com.synaptix.toast</groupId>
-				<artifactId>toast-tk-maven-plugin</artifactId>
-				<version>1.3.0-SNAPSHOT</version>
-				<executions>
-					<execution>
-						<id>download</id>
-						<phase>generate-resources</phase>
-						<goals>
-							<goal>generate</goal>
-						</goals>
-						<configuration>
-							
-						</configuration>
-					</execution>
-					<execution>
-						<id>upload</id>
-						<phase>install</phase>
-						<goals>
-							<goal>deploy</goal>
-						</goals>
-						<configuration>
-							
-						</configuration>
-					</execution>
-				</executions>
-				<configuration>
-					<webAppUrl>http://localhost:9000</webAppUrl>
-					<output-package>fr.synaptix.toast.examples</output-package>
-				</configuration>
-			</plugin>
 		</plugins>
 		<resources>
 			<resource>
