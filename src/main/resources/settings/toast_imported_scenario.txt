@@ -1,0 +1,31 @@
+h1. Name:connectTest
+#scenario id:56d838e9d0c61727fdd0644c
+#scenario driver:swing
+|| scenario || swing ||
+|[]|h1. Name:newScenario
+#scenario id:56d83a5cd0c61727fdd0644d
+#scenario driver:web
+|| scenario || web ||
+|[]|h1. Name:folderTest
+#scenario id:56d83f8ed0c61727fdd0644e
+#scenario driver:folder
+|| scenario || folder ||
+|[]|h1. Name:subscenario
+#scenario id:56d85f55d0c61727fdd0644f
+#scenario driver:web
+|| scenario || web ||
+|[]|h1. Name:subToo
+#scenario id:56d85fd9d0c61727fdd06450
+#scenario driver:web
+|| scenario || web ||
+|[]|h1. Name:subTree
+#scenario id:56d85ffbd0c61727fdd06451
+#scenario driver:web
+|| scenario || web ||
+|[]|h1. Name:LoginTest
+#scenario id:56f3f695c22c0d22d86b8b87
+#scenario driver:swing
+|| scenario || swing ||
+| @web Upload my word document: {{value:string}} |
+| @swing Click on {{component:swing}} |
+

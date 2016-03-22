@@ -1,5 +1,7 @@
 package fr.synaptix.toast.examples.test.service;
 
+import java.io.IOException;
+
 import com.google.gson.Gson;
 import com.synaptix.toast.core.adapter.ActionAdapterKind;
 import com.synaptix.toast.core.annotation.Action;
@@ -37,7 +39,7 @@ public class SimpleServiceActionAdapter {
 	}
 
 
-	@Action(action = "{{value:string}} = {{value:string}}", description = "Check if a value equals another value ")
+	@Action(action = "{{value}} = {{value}}", description = "Check if a value eq@uals another value ")
 	public ITestResult simpleAssert(String firstValue, String secondValue)
 			throws Exception {
 		try {
