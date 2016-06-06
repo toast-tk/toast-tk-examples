@@ -76,7 +76,7 @@
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 		</dependency>
-		<dependency>
+		<dependency> 
 			<groupId>com.synaptix.toast</groupId>
 			<artifactId>toast-tk-runtime</artifactId>
 			<version>${toast.version}</version>
@@ -84,6 +84,11 @@
 		<dependency>
 			<groupId>com.synaptix.toast</groupId>
 			<artifactId>toast-tk-selenium-plugin</artifactId>
+			<version>${toast.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.synaptix.toast</groupId>
+			<artifactId>toast-tk-fest-plugin</artifactId>
 			<version>${toast.version}</version>
 		</dependency>
 	</dependencies>
