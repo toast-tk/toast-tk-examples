@@ -1,0 +1,1 @@
+java -javaagent:"./swing/libs\toast-tk-agent-standalone.jar"  -Dtoast.plugin.dir="./swing/plugins"  -Xdebug -Xrunjdwp:server=y,transport=dt_socket,address=4000,suspend=n  -cp "./swing/runtime/*" io.toast_tk.examples.swing.MenuSwingToast	

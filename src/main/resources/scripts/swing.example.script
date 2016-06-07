@@ -1,0 +1,70 @@
+|| setup || swing || MenuSwing ||
+| name | type | locator |
+| test1 | menu | Applications |
+| item1 | menu | Calculator |
+
+|| setup || swing || Identification ||
+| name | type | locator |
+| bouton | button | Go To Identification |
+
+|| setup || swing || Informations ||
+| name | type | locator |
+| name | input | JTextField |
+| okbouton | button | OK |
+| gender | list | gender |
+| age1 | button | 15 - 25 years |
+| age2 | button | 26 - 35 years |
+| age3 | button | 36 - 50 years |
+| age4 | button | + de 50 years |
+| size | input | size |
+
+|| setup || swing || Calculator ||
+| name | type | locator |
+| 1 | button | 1 |
+| 2 | button | 2 |
+| 3 | button | 3 |
+| 4 | button | 4 |
+| 5 | button | 5 |
+| 6 | button | 6 |
+| 7 | button | 7 |
+| 8 | button | 8 |
+| 9 | button | 9 |
+| + | button | + |
+| - | button | - |
+| * | button | * |
+| / | button | / |
+| = | button | = |
+| C | button | C |
+| 0 | button | 0 |
+| ecran | input | ecran |
+
+|| scenario || swing ||
+| Click on *Informations.age2* |
+| Click on *Informations.age3* |
+| Selectionner *Male* dans *Informations.gender* |
+
+| Click on *Informations.okbouton* |
+
+
+|| scenario || swing ||
+
+| Click on *Calculator.C* |
+| Click on *Calculator.1* |
+| Click on *Calculator.2* |
+| Click on *Calculator.3* |
+| Click on *Calculator.+* |
+| Click on *Calculator.4* |
+| Click on *Calculator.** |
+| Click on *Calculator.5* |
+| Click on *Calculator.6* |
+| Click on *Calculator.-* |
+| Click on *Calculator.7* |
+| Click on *Calculator.8* |
+| Click on *Calculator.9* |
+| Click on *Calculator./* |
+| Click on *Calculator.1* |
+| Click on *Calculator.0* |
+| Click on *Calculator.=* |
+
+
+
