@@ -43,25 +43,17 @@
 | Selectionner *Male* dans *Informations.gender* |
 | Click on *Informations.okbouton* |
 
-
 || scenario || swing ||
 | Click on *Calculator.C* |
 | Click on *Calculator.1* |
-| Click on *Calculator.2* |
-| Click on *Calculator.3* |
 | Click on *Calculator.+* |
-| Click on *Calculator.4* |
-| Click on *Calculator.** |
-| Click on *Calculator.5* |
-| Click on *Calculator.6* |
-| Click on *Calculator.-* |
-| Click on *Calculator.7* |
-| Click on *Calculator.8* |
 | Click on *Calculator.9* |
 | Click on *Calculator./* |
-| Click on *Calculator.1* |
-| Click on *Calculator.0* |
+| Click on *Calculator.2* |
+| Click on *Calculator.-* |
+| Click on *Calculator.3* |
+| Click on *Calculator.** |
+| Click on *Calculator.7* |
 | Click on *Calculator.=* |
-
 
 
