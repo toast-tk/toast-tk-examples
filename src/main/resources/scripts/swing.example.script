@@ -11,12 +11,14 @@
 | name | type | locator |
 | name | input | JTextField |
 | okbouton | button | OK |
+| boutonAnnuler | button | Annuler |
 | gender | list | gender |
 | age1 | button | 15 - 25 years |
 | age2 | button | 26 - 35 years |
 | age3 | button | 36 - 50 years |
 | age4 | button | + de 50 years |
 | size | input | size |
+| hair | list | hair |
 
 || setup || swing || Calculator ||
 | name | type | locator |
@@ -39,8 +41,11 @@
 | ecran | input | ecran |
 
 || scenario || swing ||
-| Click on *Informations.age2* |
+| Type *NomEtPrenom* in *Informations.name* |
 | Selectionner *Male* dans *Informations.gender* |
+| Click on *Informations.age2* |
+| Type *180* in *Informations.size* |
+| Selectionner *Dark* in **Informations.hair* |
 | Click on *Informations.okbouton* |
 
 || scenario || swing ||
@@ -55,5 +60,3 @@
 | Click on *Calculator.** |
 | Click on *Calculator.7* |
 | Click on *Calculator.=* |
-
-
