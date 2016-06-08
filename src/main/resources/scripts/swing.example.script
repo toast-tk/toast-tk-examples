@@ -45,7 +45,7 @@
 | Selectionner *Male* dans *Informations.gender* |
 | Click on *Informations.age2* |
 | Type *180* in *Informations.size* |
-| Selectionner *Dark* in **Informations.hair* |
+| Selectionner *Dark* in *Informations.hair* |
 | Click on *Informations.okbouton* |
 
 || scenario || swing ||
