@@ -40,14 +40,11 @@
 
 || scenario || swing ||
 | Click on *Informations.age2* |
-| Click on *Informations.age3* |
 | Selectionner *Male* dans *Informations.gender* |
-
 | Click on *Informations.okbouton* |
 
 
 || scenario || swing ||
-
 | Click on *Calculator.C* |
 | Click on *Calculator.1* |
 | Click on *Calculator.2* |
