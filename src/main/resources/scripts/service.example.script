@@ -2,6 +2,7 @@
 || scenario || service ||
 | *toto* = *titi* |
 | *toto* = *toto* |
+|*1* and *2*| 3 |
 
 # Http Service Example
 $jsonToPost:="""
