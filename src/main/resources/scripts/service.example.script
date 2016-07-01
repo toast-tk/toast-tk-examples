@@ -3,7 +3,6 @@
 | *toto* = *titi* |
 | *toto* = *toto* |
 |*1* and *2*| 3 |
-|*1* and *2*| 2 |
 
 # Http Service Example
 $jsonToPost:="""
