@@ -1,12 +1,9 @@
 # Simple assert example
 || scenario || service ||
 | *toto* = *titi* |
-| *toto* = *toto* |
-<<<<<<< HEAD
+| *toto* = *toto* |	
 |*1* and *2*| 3 |
 |*1* and *2*| 2 |
-=======
->>>>>>> parent of 55f2f49... add service adapter for addition
 
 # Http Service Example
 $jsonToPost:="""
