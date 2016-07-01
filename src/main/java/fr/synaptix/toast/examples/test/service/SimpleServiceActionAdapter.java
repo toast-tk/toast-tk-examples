@@ -54,12 +54,4 @@ public class SimpleServiceActionAdapter {
 			return new FailureResult(e.getCause().getMessage());
 		}
 	}
-
-	@Action(action = "{{value}} and {{value}}", description = "Add a value to another value")
-	public int add(String firstValue, String secondValue)
-			throws Exception {
-		int a=Integer.parseInt(firstValue);
-		int b=Integer.parseInt(secondValue);
-		return a+b;
-	}
 }

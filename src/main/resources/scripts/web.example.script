@@ -3,10 +3,18 @@ h1. Web Components Setup
 || auto setup || web page || Google ||
 | name | type | locator | method | position |
 | recherche | input | lst-ib | ID | 0 |
+<<<<<<< HEAD
 
+=======
+>>>>>>> parent of 55f2f49... add service adapter for addition
 
 h1. login scenario
 
 || scenario || web ||
 |Naviguer vers *http://www.google.com*|
+<<<<<<< HEAD
+=======
+|Type *test* in *Google.recherche*|
+
+>>>>>>> parent of 55f2f49... add service adapter for addition
 
