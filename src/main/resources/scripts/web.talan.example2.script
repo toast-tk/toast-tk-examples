@@ -10,7 +10,6 @@
 
 || scenario || web ||
 |Open browser at *http://www.talan.fr/en/jobs3/*|
-|Count *Jobs.job*|55|
+|Count *Jobs.job*|
 |Select the *5*th *Jobs.job* as *$myJob*|
-|Read *$myJobs.title*|CONSULTANT AMOA SI INFRASTRUCTURES D’ÉCHANGES H/F|
 |Click on *$myJobs.title*|
