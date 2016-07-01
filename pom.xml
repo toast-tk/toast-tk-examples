@@ -2,12 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<version>0.1.2-SNAPSHOT</version>
-	<groupId>fr.synaptix.test</groupId>
+	<version>0.1.2</version>
+	<groupId>io.toast</groupId>
 	<artifactId>toast-tk-examples</artifactId>
 	<properties>
-		<toast.version>0.1.2-SNAPSHOT</toast.version>
-
+		<toast.version>0.1.2</toast.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.int.sourceDirectory>${project.basedir}/src/int/java</project.int.sourceDirectory>
 		<project.int.classDirectory>${project.basedir}/src/int/java</project.int.classDirectory>

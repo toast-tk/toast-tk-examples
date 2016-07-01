@@ -1,5 +1,5 @@
 default-web-driver:
-  - navigate: Naviguer vers $1 
+  - navigate: Navigate to $1 
   - type_in_web_component: Saisir dans $2 la valeur $1 
   - click_on_web_component: Cliquer sur $1 
   - select_in_web_component: Selectionner $1 dans $2 
@@ -10,5 +10,5 @@ json-adapter:
 xml-adapter:
   - integrate: Intégrer l'xml $1
 dynamic-service-adapter:
-  - sql: Faire la requete $1 et la sauvegarder dans la variable $2
+  - sql: run the following sql request $1
   
