@@ -1,6 +1,6 @@
 package io.toast.examples.test.xml;
 
-import com.synaptix.toast.runtime.AbstractScenarioRunner;
+import io.toast.tk.runtime.AbstractScenarioRunner;
 
 public class XmlExampleRunner extends AbstractScenarioRunner {
 
@@ -22,7 +22,7 @@ public class XmlExampleRunner extends AbstractScenarioRunner {
 
 	public static void main(String[] args) throws Exception {
 		XmlExampleRunner testRunner = new XmlExampleRunner();
-		testRunner.run("./scripts/xml.example.md");
+		testRunner.run("scripts/xml.example.md");
 	}
 
 }

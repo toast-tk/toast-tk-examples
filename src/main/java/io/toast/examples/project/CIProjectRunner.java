@@ -5,9 +5,9 @@ import java.net.URL;
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.synaptix.toast.dao.domain.impl.test.block.IProject;
-import com.synaptix.toast.runtime.AbstractProjectRunner;
-import com.synaptix.toast.runtime.parse.ProjectParser;
+import io.toast.tk.dao.domain.impl.test.block.IProject;
+import io.toast.tk.runtime.AbstractProjectRunner;
+import io.toast.tk.runtime.parse.ProjectParser;
 
 public class CIProjectRunner extends AbstractProjectRunner {
 

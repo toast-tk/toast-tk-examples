@@ -2,7 +2,7 @@ package io.toast.examples.test.json;
 
 import java.io.InputStream;
 
-import com.synaptix.toast.runtime.AbstractScenarioRunner;
+import io.toast.tk.runtime.AbstractScenarioRunner;
 
 public class JsonExampleRunner extends AbstractScenarioRunner {
 

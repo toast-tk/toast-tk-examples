@@ -1,10 +1,14 @@
 package io.toast.examples.test.service;
 
 import com.google.inject.Inject;
-import com.synaptix.toast.core.adapter.ActionAdapterKind;
-import com.synaptix.toast.core.annotation.Action;
-import com.synaptix.toast.core.annotation.ActionAdapter;
-import com.synaptix.toast.runtime.IActionItemRepository;
+
+import io.toast.tk.core.adapter.ActionAdapterKind;
+import io.toast.tk.core.annotation.Action;
+import io.toast.tk.core.annotation.ActionAdapter;
+import io.toast.tk.dao.core.report.FailureResult;
+import io.toast.tk.dao.core.report.SuccessResult;
+import io.toast.tk.dao.domain.api.test.ITestResult;
+import io.toast.tk.runtime.IActionItemRepository;
 
 @ActionAdapter(value = ActionAdapterKind.service, name = "dynamic-service-adapter")
 public class DynamicServiceActionAdapter {
