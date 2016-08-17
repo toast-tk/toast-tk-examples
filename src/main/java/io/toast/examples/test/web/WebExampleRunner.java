@@ -1,6 +1,6 @@
 package io.toast.examples.test.web;
 
-import com.synaptix.toast.runtime.AbstractScenarioRunner;
+import io.toast.tk.runtime.AbstractScenarioRunner;
 
 public class WebExampleRunner extends AbstractScenarioRunner {
 
@@ -22,7 +22,7 @@ public class WebExampleRunner extends AbstractScenarioRunner {
 
 	public static void main(String[] args) throws Exception {
 		WebExampleRunner testRunner = new WebExampleRunner();
-		testRunner.run("./scripts/web.example.script");
+		testRunner.run("scripts/web.example.md");
 	}
 
 }
