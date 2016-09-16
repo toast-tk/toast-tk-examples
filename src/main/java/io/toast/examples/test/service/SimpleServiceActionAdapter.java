@@ -5,14 +5,14 @@ import java.io.IOException;
 import org.junit.Assert;
 
 import com.google.gson.Gson;
-import com.synaptix.toast.core.adapter.ActionAdapterKind;
-import com.synaptix.toast.core.annotation.Action;
-import com.synaptix.toast.core.annotation.ActionAdapter;
-import com.synaptix.toast.core.report.FailureResult;
-import com.synaptix.toast.core.report.SuccessResult;
-import com.synaptix.toast.dao.domain.api.test.ITestResult;
 
 import io.toast.examples.test.bean.User;
+import io.toast.tk.core.adapter.ActionAdapterKind;
+import io.toast.tk.core.annotation.Action;
+import io.toast.tk.core.annotation.ActionAdapter;
+import io.toast.tk.dao.core.report.FailureResult;
+import io.toast.tk.dao.core.report.SuccessResult;
+import io.toast.tk.dao.domain.api.test.ITestResult;
 
 
 @ActionAdapter(value = ActionAdapterKind.service, name = "service-adapter")

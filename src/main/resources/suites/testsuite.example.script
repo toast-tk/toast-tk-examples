@@ -1,4 +1,4 @@
 || campaign || TNR v1.0 ||
-| Test json | ../scripts/json.example.script |
-| Test service | ../scripts/service.example.script |
-| Test xml | ../scripts/xml.example.script |
+| Test json | scripts/json.example.md |
+| Test service | scripts/service.example.md |
+| Test xml | scripts/xml.example.md |

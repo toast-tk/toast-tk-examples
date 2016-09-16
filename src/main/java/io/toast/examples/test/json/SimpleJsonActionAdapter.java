@@ -1,12 +1,11 @@
 package io.toast.examples.test.json;
 
-import com.synaptix.toast.core.adapter.ActionAdapterKind;
-import com.synaptix.toast.core.annotation.Action;
-import com.synaptix.toast.core.annotation.ActionAdapter;
-import com.synaptix.toast.core.report.SuccessResult;
-import com.synaptix.toast.dao.domain.api.test.ITestResult;
-
 import io.toast.examples.test.bean.ProjetFlux;
+import io.toast.tk.core.adapter.ActionAdapterKind;
+import io.toast.tk.core.annotation.Action;
+import io.toast.tk.core.annotation.ActionAdapter;
+import io.toast.tk.dao.core.report.SuccessResult;
+import io.toast.tk.dao.domain.api.test.ITestResult;
 
 
 @ActionAdapter(name="json-adapter", value= ActionAdapterKind.service)

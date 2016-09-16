@@ -1,11 +1,12 @@
 package io.toast.examples.test.web;
 
 import com.google.inject.Inject;
-import com.synaptix.toast.adapter.web.AbstractWebActionAdapter;
-import com.synaptix.toast.core.adapter.ActionAdapterKind;
-import com.synaptix.toast.core.annotation.Action;
-import com.synaptix.toast.core.annotation.ActionAdapter;
-import com.synaptix.toast.runtime.IActionItemRepository;
+
+import io.toast.tk.adapter.web.AbstractWebActionAdapter;
+import io.toast.tk.core.adapter.ActionAdapterKind;
+import io.toast.tk.core.annotation.Action;
+import io.toast.tk.core.annotation.ActionAdapter;
+import io.toast.tk.runtime.IActionItemRepository;
 
 
 /**

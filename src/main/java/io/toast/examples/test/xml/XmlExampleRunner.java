@@ -1,6 +1,6 @@
 package io.toast.examples.test.xml;
 
-import com.synaptix.toast.runtime.AbstractScenarioRunner;
+import io.toast.tk.runtime.AbstractScenarioRunner;
 
 public class XmlExampleRunner extends AbstractScenarioRunner {
 

@@ -1,13 +1,10 @@
 package io.toast.examples.project;
 
-import java.net.URL;
-
-import org.junit.Assert;
 import org.junit.Test;
 
-import com.synaptix.toast.dao.domain.impl.test.block.IProject;
-import com.synaptix.toast.runtime.AbstractProjectRunner;
-import com.synaptix.toast.runtime.parse.ProjectParser;
+import io.toast.tk.dao.domain.impl.test.block.ITestPlan;
+import io.toast.tk.runtime.AbstractProjectRunner;
+import io.toast.tk.runtime.parse.ProjectParser;
 
 /**
  * To run this example, a mongoDB instance is required 
@@ -16,7 +13,7 @@ import com.synaptix.toast.runtime.parse.ProjectParser;
 public class CIMongoStorageProjectRunner extends AbstractProjectRunner {
 
 	private static final String MONGO_DB_REPORT_STORAGE_HOST = "localhost"; 
-
+	private static final String API_TOKEN = ".7uKjEj.zdCrSvKk4FTtluh712VqvCkg";
 	private static final int MONGO_DB_REPORT_STORAGE_PORT = 27017;
 	
     public CIMongoStorageProjectRunner(String mongoDbHost, int mongoDbPort) throws Exception {
@@ -27,12 +24,10 @@ public class CIMongoStorageProjectRunner extends AbstractProjectRunner {
         CIMongoStorageProjectRunner projectRunner;
         try {
             projectRunner = new CIMongoStorageProjectRunner(MONGO_DB_REPORT_STORAGE_HOST, MONGO_DB_REPORT_STORAGE_PORT);
-            URL testFileUrl = CIMongoStorageProjectRunner.class.getClassLoader().getResource("suites/testsuite.example.script");
-            Assert.assertNotNull(testFileUrl);
-            String path = testFileUrl.getPath();
             ProjectParser projectParser = new ProjectParser();
-            IProject project = projectParser.parse(path);
-            projectRunner.testAndStore(project);
+            ITestPlan testplan = projectParser.parse("suites/testsuite.example.script");
+            testplan.setName("TestPlan 5");
+            projectRunner.testAndStore(API_TOKEN, testplan);
         } catch (Exception e) {
             e.printStackTrace();
         }

@@ -1,6 +1,6 @@
 package io.toast.examples.test.service;
 
-import com.synaptix.toast.runtime.AbstractScenarioRunner;
+import io.toast.tk.runtime.AbstractScenarioRunner;
 
 public class DynamicServiceExampleRunner extends AbstractScenarioRunner {
 

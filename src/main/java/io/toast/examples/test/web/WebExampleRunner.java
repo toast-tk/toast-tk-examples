@@ -1,6 +1,6 @@
 package io.toast.examples.test.web;
 
-import com.synaptix.toast.runtime.AbstractScenarioRunner;
+import io.toast.tk.runtime.AbstractScenarioRunner;
 
 public class WebExampleRunner extends AbstractScenarioRunner {
 
