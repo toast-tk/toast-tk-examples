@@ -54,23 +54,6 @@
 					</execution>
 				</executions>
 			</plugin>
-			<plugin>
-				<groupId>io.toast-tk</groupId>
-				<artifactId>toast-tk-maven-plugin</artifactId>
-				<version>${toast.version}</version>
-				<executions>
-					<execution>
-						<phase>generate-sources</phase>
-						<goals>
-							<goal>download</goal>
-						</goals>
-						<configuration>
-							<webAppUrl>http://localhost:9000</webAppUrl>
-							<apiKey>.7uKjEj.zdCrSvKk4FTtluh712VqvCkg</apiKey>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
 		</plugins>
 		<resources>
 			<resource>
@@ -91,7 +74,8 @@
 		</testResources>
 		<pluginManagement>
 			<plugins>
-				<!--This plugin's configuration is used to store Eclipse m2e settings only. It has no influence on the Maven build itself.-->
+				<!--This plugin's configuration is used to store Eclipse m2e settings 
+					only. It has no influence on the Maven build itself. -->
 				<plugin>
 					<groupId>org.eclipse.m2e</groupId>
 					<artifactId>lifecycle-mapping</artifactId>
@@ -140,7 +124,49 @@
 			<version>${toast.version}</version>
 		</dependency>
 	</dependencies>
+	<repositories>
+		<repository>
+			<id>snapshots-repo</id>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<releases>
+				<enabled>false</enabled>
+			</releases>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 	<profiles>
+
+		<profile>
+			<id>WEBAPP</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>io.toast-tk</groupId>
+						<artifactId>toast-tk-maven-plugin</artifactId>
+						<version>${toast.version}</version>
+						<executions>
+							<execution>
+								<phase>generate-sources</phase>
+								<goals>
+									<goal>download</goal>
+								</goals>
+								<configuration>
+									<!-- Change with your webapp url:port -->
+									<webAppUrl>http://localhost:9000</webAppUrl>
+									<!-- Change to the user token -->
+									<apiKey>.7uKjEj.zdCrSvKk4FTtluh712VqvCkg</apiKey>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
 		<profile>
 			<id>DEV-INT</id>
 			<activation>
