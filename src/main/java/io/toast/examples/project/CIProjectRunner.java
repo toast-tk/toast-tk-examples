@@ -1,11 +1,8 @@
 package io.toast.examples.project;
 
-import java.net.URL;
-
-import org.junit.Assert;
 import org.junit.Test;
 
-import io.toast.tk.dao.domain.impl.test.block.IProject;
+import io.toast.tk.dao.domain.impl.test.block.ITestPlan;
 import io.toast.tk.runtime.AbstractProjectRunner;
 import io.toast.tk.runtime.parse.ProjectParser;
 
@@ -19,12 +16,9 @@ public class CIProjectRunner extends AbstractProjectRunner {
         CIProjectRunner projectRunner;
         try {
             projectRunner = new CIProjectRunner();
-            URL testFileUrl = CIProjectRunner.class.getClassLoader().getResource("suites/testsuite.example.script");
-            Assert.assertNotNull(testFileUrl);
-            String path = testFileUrl.getPath();
             ProjectParser projectParser = new ProjectParser();
-            IProject project = projectParser.parse(path);
-            projectRunner.execute(project, false);
+            ITestPlan testPlan = projectParser.parse("suites/testsuite.example.script");
+            projectRunner.execute(testPlan, false);
         } catch (Exception e) {
             e.printStackTrace();
         }
