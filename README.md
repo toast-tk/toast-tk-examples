@@ -7,7 +7,7 @@ This project contains example test files for Toast-tk framework
 Clone toast-tk-example repository
 
 ``` bash
-git clone https://github.com/synaptix-labs/toast-tk-examples.git
+git clone https://github.com/toast-tk/toast-tk-examples.git
 cd toast-tk-examples
 ```
 
