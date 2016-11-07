@@ -22,7 +22,7 @@ public class XmlExampleRunner extends AbstractScenarioRunner {
 
 	public static void main(String[] args) throws Exception {
 		XmlExampleRunner testRunner = new XmlExampleRunner();
-		testRunner.run("./scripts/xml.example.md");
+		testRunner.run("scripts/xml.example.md");
 	}
 
 }

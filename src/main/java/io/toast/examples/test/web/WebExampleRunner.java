@@ -22,7 +22,7 @@ public class WebExampleRunner extends AbstractScenarioRunner {
 
 	public static void main(String[] args) throws Exception {
 		WebExampleRunner testRunner = new WebExampleRunner();
-		testRunner.run("./scripts/web.example.script");
+		testRunner.run("scripts/web.example.md");
 	}
 
 }

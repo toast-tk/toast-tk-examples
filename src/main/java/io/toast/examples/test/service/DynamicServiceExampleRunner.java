@@ -22,7 +22,7 @@ public class DynamicServiceExampleRunner extends AbstractScenarioRunner {
 
 	public static void main(String[] args) throws Exception {
 		DynamicServiceExampleRunner testRunner = new DynamicServiceExampleRunner();
-		testRunner.run("./scripts/service.dynamic.md");
+		testRunner.run("scripts/service.dynamic.md");
 	}
 
 }

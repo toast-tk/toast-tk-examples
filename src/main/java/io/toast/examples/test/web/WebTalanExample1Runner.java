@@ -22,7 +22,7 @@ public class WebTalanExample1Runner extends AbstractScenarioRunner {
 
 	public static void main(String[] args) throws Exception {
 		WebTalanExample1Runner testRunner = new WebTalanExample1Runner();
-		testRunner.run("./scripts/web.talan.example.1.md");
+		testRunner.run("scripts/web.talan.example.1.md");
 	}
 
 }

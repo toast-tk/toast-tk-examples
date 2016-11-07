@@ -13,20 +13,20 @@ import io.toast.tk.runtime.parse.ProjectParser;
 public class CIMongoStorageProjectRunner extends AbstractProjectRunner {
 
 	private static final String MONGO_DB_REPORT_STORAGE_HOST = "localhost"; 
-	private static final String API_TOKEN = ".7uKjEj.zdCrSvKk4FTtluh712VqvCkg";
+	private static final String API_TOKEN = "4fYDkIAL0qrHXNxRKuK8yzUZAgNr9Ywf";
 	private static final int MONGO_DB_REPORT_STORAGE_PORT = 27017;
 	
-    public CIMongoStorageProjectRunner(String mongoDbHost, int mongoDbPort) throws Exception {
-        super(mongoDbHost, mongoDbPort);
+    public CIMongoStorageProjectRunner(String mongoDbHost, int mongoDbPort, String db) throws Exception {
+        super(mongoDbHost, mongoDbPort, db);
     }
 
     public static void main(String[] args) {
         CIMongoStorageProjectRunner projectRunner;
         try {
-            projectRunner = new CIMongoStorageProjectRunner(MONGO_DB_REPORT_STORAGE_HOST, MONGO_DB_REPORT_STORAGE_PORT);
+            projectRunner = new CIMongoStorageProjectRunner(MONGO_DB_REPORT_STORAGE_HOST, MONGO_DB_REPORT_STORAGE_PORT, "play_db");
             ProjectParser projectParser = new ProjectParser();
             ITestPlan testplan = projectParser.parse("suites/testsuite.example.script");
-            testplan.setName("TestPlan 5");
+            testplan.setName("TestPlan Example");
             projectRunner.testAndStore(API_TOKEN, testplan);
         } catch (Exception e) {
             e.printStackTrace();

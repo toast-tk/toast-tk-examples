@@ -7,5 +7,5 @@ h1. Web Components Setup
 h1. login scenario
 
 || scenario || web ||
-|Naviguate to *http://www.google.com*|
+|Open browser at *http://www.google.com*|
 |Type *test* in *Google.search*|

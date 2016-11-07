@@ -22,7 +22,7 @@ public class ServiceExampleRunner extends AbstractScenarioRunner {
 
 	public static void main(String[] args) throws Exception {
 		ServiceExampleRunner testRunner = new ServiceExampleRunner();
-		testRunner.run("./scripts/service.example.md");
+		testRunner.run("scripts/service.example.md");
 	}
 
 }

@@ -25,7 +25,7 @@ public class JsonExampleRunner extends AbstractScenarioRunner {
 	public static void main(String[] args) throws Exception {
 		JsonExampleRunner testRunner = new JsonExampleRunner();
 		InputStream s = JsonExampleRunner.class.getClassLoader().getResourceAsStream("scripts/data/flux.json");
-		testRunner.run("./scripts/json.example.md");
+		testRunner.run("scripts/json.example.md");
 	}
 
 }

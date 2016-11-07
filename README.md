@@ -14,16 +14,16 @@ cd toast-tk-examples
 Import the project in your IDE as a maven - java 8 project.
  
 ### Run a test set
-Run `fr.synaptix.toast.examples.project.CIProjectRunner.java`. This class runs the test campaigns described in `project1.test`.
+Run `io.toast.examples.project.CIProjectRunner.java`. This class runs the test campaigns described in `project1.test`.
 
 The test report will automatically be opened in your browser when the tests examples are executed.
-This report is generated in the project folder, under `/target/toast-test-results/Project_report.html`.
+This report is generated in the project folder, under `/target/toast-test-results/suites/testsuite.example.script.html`.
 
 [REPORT IMAGE]
 
 ### Run tests files individually
 
-To run the web test, start `fr.synaptix.toast.examples.project.WebExampleRunner.java`.
+To run the web test, start `io.toast.examples.project.WebExampleRunner.java`.
 The test report will automatically be opened in your browser after execution.
 
 [REPORT IMAGE]
@@ -33,13 +33,13 @@ The test report will automatically be opened in your browser after execution.
 ### Campaign
 
 The campaign file describes which test files must be run.
-Here, the campaign's name is "TNR v1.0", and contains the files `json.example.script`,`service.example.script`, and `xml.example.script`.
+Here, the campaign's name is "TNR v1.0", and contains the files `json.example.md`,`service.example.md`, and `xml.example.md`.
 
 ``` 
 || campaign || TNR v1.0 ||
-| Test json    | ../scripts/json.example.script    |
-| Test service | ../scripts/service.example.script |
-| Test xml     | ../scripts/xml.example.script     |
+| Test json    | scripts/json.example.md    |
+| Test service | scripts/service.example.md |
+| Test xml     | scripts/xml.example.md     |
 ``` 
 
 ### Scripts
@@ -87,7 +87,7 @@ default-web-driver:
 ...
 ```
 
-Within the "web.example.fr.script" we are currently doing the same scenario as the previous one, except that we currently call our custom sentences instead of predefined one.
+Within the "web.example.fr.md" we are currently doing the same scenario as the previous one, except that we currently call our custom sentences instead of predefined one.
 
 ```
 ...
@@ -118,4 +118,3 @@ $url:=https://www.google.com
 | POST *$jsonToPost* to *$url* |
 ``` 
 
-TODO
