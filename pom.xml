@@ -167,9 +167,9 @@
 								</goals>
 								<configuration>
 									<!-- Change with your webapp url:port -->
-									<webAppUrl>http://localhost:9000</webAppUrl>
+									<webAppUrl>http://toast-tk.herokuapp.com</webAppUrl>
 									<!-- Change to the user token -->
-									<apiKey>4fYDkIAL0qrHXNxRKuK8yzUZAgNr9Ywf</apiKey>
+									<apiKey>ZA-QzzFSFS.bctw1MtEZQ2spsRSM.Ix3</apiKey>
 								</configuration>
 							</execution>
 						</executions>

@@ -7,11 +7,12 @@ import io.toast.tk.runtime.AbstractProjectRunner;
 import io.toast.tk.runtime.parse.ProjectParser;
 
 /**
- * To run this example, a mongoDB instance is required 
- *
+ * To run this example
+ * - a mongoDB instance is required 
+ * - An active toast-webapp instance running with a registered user (apikey)
  */
 public class CIMongoStorageProjectRunner extends AbstractProjectRunner {
-
+	
 	private static final String MONGO_DB_REPORT_STORAGE_HOST = "localhost"; 
 	private static final String API_TOKEN = "4fYDkIAL0qrHXNxRKuK8yzUZAgNr9Ywf";
 	private static final int MONGO_DB_REPORT_STORAGE_PORT = 27017;
@@ -51,7 +52,6 @@ public class CIMongoStorageProjectRunner extends AbstractProjectRunner {
     @Override
     public void beginTest() {
         // TODO Auto-generated method stub
-
     }
 
     @Override

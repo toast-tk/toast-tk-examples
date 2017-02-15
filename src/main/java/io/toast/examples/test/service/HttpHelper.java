@@ -75,6 +75,8 @@ public class HttpHelper {
 	}
 
 	public static CloseableHttpClient buildHttpClient() {
-		return HttpClientBuilder.create().build();
+		CloseableHttpClient httpclient = HttpClientBuilder.create().build();
+		return httpclient;
 	}
+
 }
