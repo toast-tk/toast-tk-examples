@@ -1,16 +1,16 @@
 package io.toast.examples.project;
 
+import io.toast.tk.runtime.AbstractTestPlanRunner;
 import org.junit.Test;
 
 import io.toast.tk.dao.domain.impl.test.block.ITestPlan;
-import io.toast.tk.runtime.AbstractProjectRunner;
 import io.toast.tk.runtime.parse.ProjectParser;
 
 /**
  * To run this example, a mongoDB instance is required 
  *
  */
-public class CIMongoStorageProjectRunner extends AbstractProjectRunner {
+public class CIMongoStorageProjectRunner extends AbstractTestPlanRunner {
 
 	private static final String MONGO_DB_REPORT_STORAGE_HOST = "localhost"; 
 	private static final String API_TOKEN = "4fYDkIAL0qrHXNxRKuK8yzUZAgNr9Ywf";

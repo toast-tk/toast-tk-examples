@@ -1,4 +1,4 @@
-#include ../soa.properties
+#include soa.properties
 
 # a remplir par un appel sql
 $circulation_name:=code_cir

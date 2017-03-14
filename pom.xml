@@ -178,6 +178,41 @@
 			</build>
 		</profile>
 		<profile>
+			<id>RUN</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>io.toast-tk</groupId>
+						<artifactId>toast-tk-maven-plugin</artifactId>
+						<version>${toast.snapshot.version}</version>
+						<executions>
+							<execution>
+								<phase>verify</phase>
+								<goals>
+									<goal>run</goal>
+								</goals>
+								<configuration>
+									<scripts>
+										<fileset>
+											<directory>${basedir}/src/main/resources/scripts</directory>
+											<includes>
+												<include>*.md</include>
+											</includes>
+										</fileset>
+									</scripts>
+									<pluginsDirectory>${basedir}/plugins</pluginsDirectory>
+									<outputDirectory>${basedir}/reports</outputDirectory>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+		<profile>
 			<id>DEV-INT</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>

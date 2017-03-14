@@ -1,12 +1,12 @@
 package io.toast.examples.project;
 
+import io.toast.tk.runtime.AbstractTestPlanRunner;
 import org.junit.Test;
 
 import io.toast.tk.dao.domain.impl.test.block.ITestPlan;
-import io.toast.tk.runtime.AbstractProjectRunner;
 import io.toast.tk.runtime.parse.ProjectParser;
 
-public class CIProjectRunner extends AbstractProjectRunner {
+public class CIProjectRunner extends AbstractTestPlanRunner {
 
     public CIProjectRunner() throws Exception {
         super();
