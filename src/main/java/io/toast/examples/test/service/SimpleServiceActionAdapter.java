@@ -2,6 +2,7 @@ package io.toast.examples.test.service;
 
 import java.io.IOException;
 
+import io.toast.examples.test.bean.Product;
 import org.junit.Assert;
 
 import com.google.gson.Gson;
@@ -18,10 +19,11 @@ import io.toast.tk.dao.domain.api.test.ITestResult;
 @ActionAdapter(value = ActionAdapterKind.service, name = "service-adapter")
 public class SimpleServiceActionAdapter {
 
-	@Action(action = "GET {{value}}", description = "Get Request")
+	@Action(action = "GET {{value}}", description = "Get Request body response")
 	public String getUrl(String url) throws IOException, Exception{
-		int responseStatusCode = HttpHelper.GET(url);
-		return "Status Reponse Code: " + responseStatusCode;	
+		String response = HttpHelper.GETResponseBody(url);
+		Assert.assertNotNull(response);
+		return response;
 	}
 	
 	@Action(action = "POST {{io.toast.examples.test.bean.User:value:json}} to {{value}}", description = "Post json")
@@ -47,7 +49,14 @@ public class SimpleServiceActionAdapter {
 	 	int b = Integer.parseInt(secondValue);
 	 	return a+b;
 	}
-	
+
+	@Action(action = "{{value:json}} equals {{value:json}}", description = "Get Request body response")
+	public String compare(Product one, Product two) throws IOException, Exception{
+		Assert.assertEquals(one, two);
+		return "OK";
+	}
+
+
 	@Action(action = "assert {{value}} equals {{value}}", description = "Add a value to another value")
  	public void assertError(String firstValue, String secondValue) {
  		Assert.assertEquals(firstValue, secondValue);
