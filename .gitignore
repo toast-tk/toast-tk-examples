@@ -22,3 +22,5 @@ pom.xml.versionsBackup
 
 #toast
 toast-logs.log
+reports/
+null/
