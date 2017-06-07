@@ -1,4 +1,4 @@
-package io.toast.examples.project;
+package io.toast.examples.plan;
 
 import io.toast.tk.runtime.AbstractTestPlanRunner;
 import org.junit.Test;
@@ -6,16 +6,16 @@ import org.junit.Test;
 import io.toast.tk.dao.domain.impl.test.block.ITestPlan;
 import io.toast.tk.runtime.parse.ProjectParser;
 
-public class CIProjectRunner extends AbstractTestPlanRunner {
+public class CITestPlanRunner extends AbstractTestPlanRunner {
 
-    public CIProjectRunner() throws Exception {
+    public CITestPlanRunner() throws Exception {
         super();
     }
 
     public static void main(String[] args) {
-        CIProjectRunner projectRunner;
+        CITestPlanRunner projectRunner;
         try {
-            projectRunner = new CIProjectRunner();
+            projectRunner = new CITestPlanRunner();
             ProjectParser projectParser = new ProjectParser();
             ITestPlan testPlan = projectParser.parse("suites/testsuite.example.script");
             projectRunner.execute(testPlan, false);
@@ -26,7 +26,7 @@ public class CIProjectRunner extends AbstractTestPlanRunner {
 
     @Test
     public void runTest() {
-        CIProjectRunner.main(null);
+        CITestPlanRunner.main(null);
     }
 
     @Override

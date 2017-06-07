@@ -7,7 +7,6 @@
 	<artifactId>toast-tk-examples</artifactId>
 	<properties>
 		<toast.version>0.1.5-SNAPSHOT</toast.version>
-		<toast.snapshot.version>0.1.5-SNAPSHOT</toast.snapshot.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.int.sourceDirectory>${project.basedir}/src/int/java</project.int.sourceDirectory>
 		<project.int.classDirectory>${project.basedir}/src/int/java</project.int.classDirectory>
@@ -91,7 +90,7 @@
 											toast-tk-maven-plugin
 										</artifactId>
 										<versionRange>
-											[0.1.4-SNAPSHOT,)
+											[0.1.5-SNAPSHOT,)
 										</versionRange>
 										<goals>
 											<goal>download</goal>
@@ -122,7 +121,7 @@
 		<dependency>
 			<groupId>io.toast-tk</groupId>
 			<artifactId>toast-tk-selenium-plugin</artifactId>
-			<version>${toast.snapshot.version}</version>
+			<version>${toast.version}</version>
 		</dependency>
 	</dependencies>
 	<repositories>
@@ -149,7 +148,7 @@
 	</repositories>
 	<profiles>
 		<profile>
-			<id>WEBAPP</id>
+			<id>DOWNLOAD</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
@@ -187,7 +186,7 @@
 					<plugin>
 						<groupId>io.toast-tk</groupId>
 						<artifactId>toast-tk-maven-plugin</artifactId>
-						<version>${toast.snapshot.version}</version>
+						<version>${toast.version}</version>
 						<executions>
 							<execution>
 								<phase>verify</phase>
@@ -199,7 +198,8 @@
 										<fileset>
 											<directory>${basedir}/src/main/resources/scripts</directory>
 											<includes>
-												<include>*.md</include>
+												<!-- include any script to be run here; wild card accepted -->
+												<include>json.example.md</include>
 											</includes>
 										</fileset>
 									</scripts>
@@ -213,7 +213,7 @@
 			</build>
 		</profile>
 		<profile>
-			<id>DEV-INT</id>
+			<id>REPORT</id>
 			<activation>
 				<activeByDefault>false</activeByDefault>
 			</activation>
@@ -237,7 +237,7 @@
 									<testClassesDirectory>${project.build.outputDirectory}</testClassesDirectory>
 									<includes>
 										<include>
-											**/CIProjectRunner.java
+											**/CITestPlanRunner.java
 										</include>
 									</includes>
 								</configuration>
