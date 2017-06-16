@@ -4,7 +4,7 @@ import io.toast.tk.runtime.AbstractTestPlanRunner;
 import org.junit.Test;
 
 import io.toast.tk.dao.domain.impl.test.block.ITestPlan;
-import io.toast.tk.runtime.parse.ProjectParser;
+import io.toast.tk.runtime.parse.TestPlanParser;
 
 public class CITestPlanRunner extends AbstractTestPlanRunner {
 
@@ -16,9 +16,9 @@ public class CITestPlanRunner extends AbstractTestPlanRunner {
         CITestPlanRunner projectRunner;
         try {
             projectRunner = new CITestPlanRunner();
-            ProjectParser projectParser = new ProjectParser();
+            TestPlanParser projectParser = new TestPlanParser();
             ITestPlan testPlan = projectParser.parse("suites/testsuite.example.script");
-            projectRunner.execute(testPlan, false);
+            projectRunner.execute(testPlan, false, null);
         } catch (Exception e) {
             e.printStackTrace();
         }

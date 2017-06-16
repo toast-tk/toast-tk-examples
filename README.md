@@ -14,7 +14,8 @@ cd toast-tk-examples
 Import the project in your IDE as a maven - java 8 project.
  
 ### Run a test set
-Run `io.toast.examples.project.CIProjectRunner.java`. This class runs the test campaigns described in `project1.test`.
+Run `io.toast.examples.plan.CITestPlanRunner`. 
+This class runs the test campaigns described in `suites/testsuite.example.script`.
 
 The test report will automatically be opened in your browser when the tests examples are executed.
 This report is generated in the project folder, under `/target/toast-test-results/suites/testsuite.example.script.html`.

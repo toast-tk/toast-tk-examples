@@ -24,3 +24,4 @@ pom.xml.versionsBackup
 toast-logs.log
 reports/
 null/
+webapp-output/
