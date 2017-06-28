@@ -6,7 +6,7 @@
 	<groupId>io.toast</groupId>
 	<artifactId>toast-tk-examples</artifactId>
 	<properties>
-		<toast.version>0.1.5-SNAPSHOT</toast.version>
+		<toast.version>0.1.5</toast.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.int.sourceDirectory>${project.basedir}/src/main/java</project.int.sourceDirectory>
 		<project.int.classDirectory>${project.basedir}/src/main/java</project.int.classDirectory>
@@ -50,6 +50,23 @@
 								<source>target/generated-sources/apt</source>
 								<source>src/int/java</source>
 							</sources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-assembly-plugin</artifactId>
+				<version>2.5.3</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>attached</goal>
+						</goals>
+						<phase>package</phase>
+						<configuration>
+							<finalName>toast-tk-example</finalName>
+							<descriptor>src/assembly/bin.xml</descriptor>
 						</configuration>
 					</execution>
 				</executions>
@@ -116,6 +133,11 @@
 		<dependency>
 			<groupId>io.toast-tk</groupId>
 			<artifactId>toast-tk-runtime</artifactId>
+			<version>${toast.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>io.toast-tk</groupId>
+			<artifactId>toast-tk-agent-api</artifactId>
 			<version>${toast.version}</version>
 		</dependency>
 		<dependency>
