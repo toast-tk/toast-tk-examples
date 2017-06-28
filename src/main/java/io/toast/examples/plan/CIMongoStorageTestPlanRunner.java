@@ -59,4 +59,10 @@ public class CIMongoStorageTestPlanRunner extends AbstractTestPlanRunner {
         // TODO Auto-generated method stub
 
     }
+
+	@Override
+	public String getReportsOutputPath() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }
