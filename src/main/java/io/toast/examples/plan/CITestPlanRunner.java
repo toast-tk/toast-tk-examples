@@ -1,24 +1,24 @@
-package io.toast.examples.project;
+package io.toast.examples.plan;
 
 import io.toast.tk.runtime.AbstractTestPlanRunner;
 import org.junit.Test;
 
 import io.toast.tk.dao.domain.impl.test.block.ITestPlan;
-import io.toast.tk.runtime.parse.ProjectParser;
+import io.toast.tk.runtime.parse.TestPlanParser;
 
-public class CIProjectRunner extends AbstractTestPlanRunner {
+public class CITestPlanRunner extends AbstractTestPlanRunner {
 
-    public CIProjectRunner() throws Exception {
+    public CITestPlanRunner() throws Exception {
         super();
     }
 
     public static void main(String[] args) {
-        CIProjectRunner projectRunner;
+        CITestPlanRunner projectRunner;
         try {
-            projectRunner = new CIProjectRunner();
-            ProjectParser projectParser = new ProjectParser();
+            projectRunner = new CITestPlanRunner();
+            TestPlanParser projectParser = new TestPlanParser();
             ITestPlan testPlan = projectParser.parse("suites/testsuite.example.script");
-            projectRunner.execute(testPlan, false);
+            projectRunner.execute(testPlan, false, null);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -26,7 +26,7 @@ public class CIProjectRunner extends AbstractTestPlanRunner {
 
     @Test
     public void runTest() {
-        CIProjectRunner.main(null);
+        CITestPlanRunner.main(null);
     }
 
     @Override
@@ -50,4 +50,10 @@ public class CIProjectRunner extends AbstractTestPlanRunner {
         // TODO Auto-generated method stub
 
     }
+
+	@Override
+	public String getReportsOutputPath() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 }

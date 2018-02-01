@@ -17,5 +17,12 @@ public class SimpleJsonActionAdapter {
 	public ITestResult integrerJson(ProjetFlux fluxFromJson){
 		return new SuccessResult();
 	}
+	
+	@Action(id="integrate2",
+			action="Integrate a new {{value:json}}", 
+			description="Integrate json as java bean")
+	public ITestResult integrerNewJson(ProjetFlux fluxFromJson){
+		return new SuccessResult();
+	}
 
 }
