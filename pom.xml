@@ -2,11 +2,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<version>0.1.5-SNAPSHOT</version>
+	<version>2.0.0-SNAPSHOT</version>
 	<groupId>io.toast</groupId>
 	<artifactId>toast-tk-examples</artifactId>
 	<properties>
-		<toast.version>0.1.5</toast.version>
+		<toast.version>${project.version}</toast.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.int.sourceDirectory>${project.basedir}/src/main/java</project.int.sourceDirectory>
 		<project.int.classDirectory>${project.basedir}/src/main/java</project.int.classDirectory>
@@ -143,7 +143,7 @@
 		<dependency>
 			<groupId>io.toast-tk</groupId>
 			<artifactId>toast-tk-selenium-plugin</artifactId>
-			<version>0.1.6</version>
+			<version>${toast.version}</version>
 		</dependency>
 	</dependencies>
 	<repositories>
@@ -190,7 +190,7 @@
 									<!-- Change with your webapp url:port -->
 									<webAppUrl>http://localhost:9000</webAppUrl>
 									<!-- Change to the user token -->
-									<apiKey>4fYDkIAL0qrHXNxRKuK8yzUZAgNr9Ywf</apiKey>
+									<apiKey>lAhaFbkd_TzcL-bqXUTEEi2Vih79nLF3</apiKey>
 								</configuration>
 							</execution>
 						</executions>
@@ -219,7 +219,7 @@
 									<!-- Change with your webapp url:port -->
 									<webAppUrl>http://localhost:9000</webAppUrl>
 									<!-- Change to the user token -->
-									<apiKey>4fYDkIAL0qrHXNxRKuK8yzUZAgNr9Ywf</apiKey>
+									<apiKey>lAhaFbkd_TzcL-bqXUTEEi2Vih79nLF3</apiKey>
 								</configuration>
 							</execution>
 						</executions>
@@ -281,7 +281,9 @@
 									<goal>report</goal>
 								</goals>
 								<configuration>
-									<apiKey>4fYDkIAL0qrHXNxRKuK8yzUZAgNr9Ywf</apiKey>
+									<!-- Change to the user token -->
+									<apiKey>lAhaFbkd_TzcL-bqXUTEEi2Vih79nLF3</apiKey>
+									<!-- Change with your mongo host, port & db -->
 									<mongoHost>localhost</mongoHost>
 									<mongoPort>27017</mongoPort>
 									<mongoDb>play_db</mongoDb>
